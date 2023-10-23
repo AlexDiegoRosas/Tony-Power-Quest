@@ -9,14 +9,16 @@ public class ManagerMenu : MonoBehaviour
     [SerializeField] GameObject PanelEscenarios;
     [SerializeField] GameObject PanelMenuPrincipal;
 
-    [SerializeField] string Nivel1;
+    [SerializeField] string InicioAlNivel1;
 
+    [Header("Ecenarios Ecenas")]
     [SerializeField] string EcenarioNivel1;
     [SerializeField] string EcenarioNivel2;
     [SerializeField] string EcenarioNivel3;
     [SerializeField] string EcenarioNivel4;
     [SerializeField] string EcenarioNivel5;
 
+    
 
     public void SeleccionNivel1()
     {
@@ -79,7 +81,7 @@ public class ManagerMenu : MonoBehaviour
 
     public void IniciarJuego()
     {
-        //SceneManager.LoadScene(Nivel1);
+        SceneManager.LoadScene(InicioAlNivel1);
 
         Debug.Log("Inicio el juego");
     }

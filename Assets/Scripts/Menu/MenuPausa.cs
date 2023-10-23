@@ -7,7 +7,6 @@ public class MenuPausa : MonoBehaviour
 {
     [SerializeField] private GameObject botonPausa;
     [SerializeField] private GameObject menuPausa;
-
     private bool juegoPausado = false;
     private void Update(){
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -37,16 +36,22 @@ public class MenuPausa : MonoBehaviour
         botonPausa.SetActive(true);
         menuPausa.SetActive(false);
     }
-    public void Reiniciar()
+
+    public void Reiniciar() 
     {
+        juegoPausado = false;
         Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-    public void MenuPrincipal() 
+    public void MenuPrincipal()
     {
-        //juegoPausado = false;
-        //Time.timeScale = 1f;
-        SceneManager.LoadSceneAsync("Menu");
+        Debug.Log("Menu Principal");
+        SceneManager.LoadScene("Menu");
+    }
+
+    public void Cerrar(){
+        Debug.Log("Cerrando juego");
+        Application.Quit();
     }
 }
