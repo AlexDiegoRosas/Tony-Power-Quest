@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Source
+namespace Source.Nivel1.Puerta
 {
     public class Puerta : MonoBehaviour
     {

@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Source
+namespace Source.Nivel1.Baterias
 {
     public class Bateria : MonoBehaviour
     {
         public int bateriasNecesarias = 3; // Cambia esto al número deseado de baterías necesarias.
         public GameObject ColliderPuerta;
 
-        private int bateriasRecogidas = 0;
+        public int bateriasRecogidas = 0;
 
         void OnTriggerEnter(Collider other)
         {
